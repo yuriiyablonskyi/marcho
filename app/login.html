@@ -56,25 +56,54 @@
       </div>
     </div>
   </header>
+
   <main class="main">
-<section class="top">
-  <div class="top__container" style="background-image: url('images/top-bg.jpg');">
-    <div class="container">
-      <h2 class="top__title title">Login</h2>
-      <div class="breadcrumbs">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="/">Home</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="/">Login</a>
-          </li>
-        </ul>
+
+    <section class="top">
+      <div class="top__container" style="background-image: url('images/top-bg.jpg');">
+        <div class="container">
+          <h2 class="top__title title">Login</h2>
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="/">Home</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="/">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+
+    <section class="modal">
+      <div class="container">
+        <div class="modal__links">
+          <a class="modal__link" href="/">Register</a>
+          <a class="modal__link modal__link--active" href="/">Login</a>
+        </div>
+
+        <form class="modal__form" action="#">
+          <label class="modal__label" for="text">
+            Username or email address*
+            <input class="modal__input" type="text" id="text" required>
+          </label>
+          <label class="modal__label" for="password">
+            Password*
+            <input class="modal__input" type="password" id="password" required>
+          </label>
+          <label class="modal__label" for="checkbox">
+            <input type="checkbox" id="checkbox">
+            Remember me
+          </label>
+          <button class="modal__btn" type="submit">Log in</button>
+          <a class="modal__error" href="/">Lost your password</a>
+        </form>
+      </div>
+    </section>
   </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
