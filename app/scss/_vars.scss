@@ -46,3 +46,11 @@ $bg: #f6f6f6;
   clip: rect(0 0 0 0);
   position: absolute;
 }
+
+@mixin radio-hidden {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}

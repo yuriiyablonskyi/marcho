@@ -537,6 +537,7 @@
     .star {
       margin-left: 23px;
     }
+
     .product-item__title {
       order: -1;
       width: 100%;
@@ -722,9 +723,6 @@
       margin: 10px 0 7px;
       color: $title;
     }
-  }
-
-  &__text {
   }
 
   &__link {
@@ -1280,6 +1278,271 @@
   height: 5px;
   border: none;
   background-image: url("../images/icons/angle-down.svg");
+}
+
+.product-page {
+  padding: 120px 0 160px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-one {
+  &__inner {
+    display: flex;
+  }
+
+  &__slide {
+    width: 730px;
+    margin-right: 70px;
+  }
+
+  &__content {
+    width: 370px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $title;
+    font-size: 20px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+
+  &__price {
+    display: flex;
+    font-size: 18px;
+  }
+
+  &__price-new {
+    color: $title;
+  }
+
+  &__price-old {
+    padding-left: 15px;
+    text-decoration: line-through;
+  }
+
+  &__item-star {
+    display: flex;
+    align-items: center;
+
+    .star {
+      margin-bottom: 0;
+    }
+
+    span {
+      padding-left: 8px;
+      color: $title;
+      font-size: 22px;
+    }
+  }
+
+  &__item-text {
+    margin-bottom: 40px;
+
+    span {
+      display: block;
+      color: $title;
+      @extend %roboto-400;
+      font-size: 18px;
+    }
+  }
+
+  &__item-btn {
+    @extend %btn;
+    border: none;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+}
+
+.jq-number {
+  padding: 0;
+  position: relative;
+
+  &__field {
+    width: 114px;
+    border: 1px solid #f0f0f0;
+    transform: translateY(1px);
+
+    input {
+      width: 100%;
+      height: 50px;
+      border: none;
+      outline: none;
+      @extend %quicksand-500;
+      color: $title;
+      text-align: center;
+    }
+  }
+
+  &__spin {
+    position: absolute;
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 12px;
+      height: 1px;
+      background-color: $title;
+    }
+  }
+
+  &__spin.minus {
+    left: 15px;
+  }
+
+  &__spin.plus {
+    right: 15px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 6px;
+      width: 1px;
+      height: 12px;
+      background-color: $title;
+    }
+  }
+}
+
+.product-info {
+  &__tist {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+    display: flex;
+  }
+
+  &__title {
+    min-width: 100px;
+    color: $title;
+  }
+
+  &__link {
+    path {
+      fill: $default;
+    }
+
+    & + .product-info__link {
+      margin-left: 15px;
+    }
+
+    &:hover {
+      color: $accent;
+
+      path {
+        fill: $accent;
+      }
+    }
+  }
+}
+
+.product-slide {
+  display: flex;
+
+  .slick-vertical .slick-slide {
+    height: 140px;
+    margin-bottom: 30px;
+  }
+
+  &__thumb {
+    width: 140px;
+    margin-right: 30px;
+  }
+
+  &__thumb-item {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+    }
+  }
+
+  &__big {
+    width: 560px;
+
+    img {
+      width: 650px;
+      height: 650px;
+      object-fit: cover;
+    }
+  }
+}
+
+.product-filter {
+  &__color,
+  &__size {
+    margin-bottom: 30px;
+
+    &-title {
+      margin-bottom: 5px;
+      font-size: 18px;
+      color: $title;
+      @extend %roboto-400;
+    }
+
+    label {
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
+
+  &__color-input {
+    @include radio-hidden;
+
+    &:checked {
+      & + .product-filter__color-radio {
+        box-shadow: 0 0 0px 1px $accent;
+      }
+    }
+  }
+
+  &__color-radio {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0px 1px #ccccce;
+    cursor: pointer;
+    transition: box-shadow 0.15s linear;
+  }
+
+  &__size-input {
+    @include radio-hidden;
+
+    &:checked {
+      & + .product-filter__size-radio {
+        border-color: $accent;
+      }
+    }
+  }
+
+  &__size-radio {
+    padding: 4px 12px;
+    display: inline-block;
+    border: 1px solid #ccccce;
+    transition: border-color 0.15s linear;
+    cursor: pointer;
+  }
 }
 
 @import "media";
