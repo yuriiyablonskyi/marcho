@@ -5,7 +5,7 @@ const concat            = require('gulp-concat');
 const autoprefixer      = require('gulp-autoprefixer');
 const uglify            = require('gulp-uglify');
 const imagemin          = require('gulp-imagemin');
-const rename          = require('gulp-rename');
+const rename            = require('gulp-rename');
 const nunjucksRender    = require('gulp-nunjucks-render');
 const del               = require('del');
 const browserSync       = require('browser-sync').create();
@@ -15,7 +15,7 @@ function browsersync() {
     server: {
       baseDir: 'app/'
     },
-    notofy: false
+    notify: false
   })
 }
 
@@ -27,7 +27,7 @@ function nunjucks() {
 }
 
 function styles() {
-  return src('app/*.scss')
+  return src('app/scss/*.scss')
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(rename({
       suffix: '.min'
